@@ -3,21 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --black: #ffffff;
+  --white: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --black: #0e0e0e;
+    --white: #ffffff;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--white);
+  background: var(--black);
+}
+
+h1 {
+  @apply lg:text-[64px] leading-tight text-[24px] md:text-[40px] sm:text-[32px] font-bold lg:leading-[76px];
+}
+
+h2 {
+  @apply lg:text-[48px] leading-tight text-[24px] md:text-[36px] sm:text-[26px] font-bold lg:leading-[48px];
+}
+
+.pry-btn {
+  @apply text-white bg-reckonBlue hover:bg-black dark:hover:bg-reckonLightBlue dark:hover:text-black;
+}
+.sec-btn {
+  @apply text-black bg-transparent border  hover:border-reckonBlue bg-white md:bg-reckonLightBlue;
+}
+
+.btn-base {
+  @apply h-[59px] w-[240px]  flex items-center justify-center font-semibold capitalize rounded-[10px];
 }
 
 @layer utilities {
