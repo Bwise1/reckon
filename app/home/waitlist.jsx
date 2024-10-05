@@ -4,16 +4,34 @@ import { Toaster, toast } from "react-hot-toast";
 
 function Waitlist() {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can add the logic to handle the newsletter submission,
-    // such as sending the email to your backend or API.
-    console.log("Email submitted:", email);
+    setIsSubmitting(true);
 
-    setEmail("");
-    toast.success("You have been added to our Newsletter!");
+    try {
+      const response = await fetch(process.env.NEXT_PUBLIC_API_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors", // Important for CORS issues
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `Email=${encodeURIComponent(email)}`,
+      });
+
+      // Since we're using no-cors, we can't actually read the response
+      // We'll assume it was successful if no error was thrown
+      setEmail("");
+      toast.success("You have been added to our waitlist!");
+    } catch (error) {
+      console.error("Error submitting email:", error);
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
   return (
     <section className="lg:py-36 md:py-24 py-12 container">
       <Toaster />
