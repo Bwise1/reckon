@@ -11,10 +11,10 @@ function Hero() {
           Estimate Smarter, Manage Better with Reckon IO
         </h1>
         <p className="w-[265px] sm:w-[500px] lg:w-[862px] text-center lg:text-2xl lg:leading-[29px] text-sm sm:text-lg">
-          Reckon IO Beta is here, ready to transform how you manage construction
-          costs and materials effortlessly. Try it today and be prepared for
-          Version 1.0, with enhanced features and real-time pricing updates –
-          coming soon for even smarter management.
+          We are building a smart solution to streamline construction cost and
+          material management. The beta version is live, and your feedback has
+          been valuable. Stay tuned for version 1.0 featuring real-time pricing
+          updates and enhanced features!
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href="/" className="pry-btn btn-base mt-5 sm:mx-0 mx-auto">

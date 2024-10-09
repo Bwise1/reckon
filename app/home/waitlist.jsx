@@ -35,21 +35,18 @@ function Waitlist() {
   return (
     <section className="lg:py-36 md:py-24 py-12 container">
       <Toaster />
-      <h2 className="text-reckonBlue dark:text-[#A0C4FF] md:pb-10 pb-6 md:text-left text-center">
+      <h2 className="text-reckonBlue dark:text-[#ffffff] md:pb-10 pb-6 md:text-left text-center">
         Be the first to experience Reckon IO Version 1.0
       </h2>
       <div className="grid md:grid-cols-2 lg:gap-x-[133px] md:gap-9">
         <div className="lg:text-xl lg:leading-[24px] md:text-lg md:leading-normal font-medium text-xs leading-[16px] md:text-left text-center pr-2">
           <p className="mb-5">
-            The future of construction management is almost here. Reckon IO
-            Version 1.0 offers expanded material estimates, real-time pricing
-            updates, and tools that allow for Bill of Quantities calculation
-            anywhere, anytime, with accuracy.
+            We’re building a smarter way to manage project construction cost and
+            materials. With Reckon IO 1.0, you’ll have real-time pricing,
+            accurate estimates, and instant Bill of Quantity calculation feature
+            at your fingertips.
           </p>
-          <p>
-            Join the waitlist now and be the first to access these game-changing
-            features.
-          </p>
+          <p>Join the waitlist now to be the first to access it!</p>
         </div>
         {/* Newsletter form */}
         <form
