@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <div className="lg:h-20 md:h-10 w-full"></div>
-      <Download />
+      <Download id="download-section" />
       <div className="lg:h-20 md:h-10 w-full"></div>
       <Waitlist />
     </main>

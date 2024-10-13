@@ -39,7 +39,7 @@ function Waitlist() {
         Be the first to experience Reckon IO Version 1.0
       </h2>
       <div className="grid md:grid-cols-2 lg:gap-x-[133px] md:gap-9">
-        <div className="lg:text-xl lg:leading-[24px] md:text-lg md:leading-normal font-medium text-xs leading-[16px] md:text-left text-center pr-2">
+        <div className="lg:text-2xl lg:leading-[24px] md:text-lg md:leading-normal font-medium text-sm leading-[16px] md:text-left text-center pr-2">
           <p className="mb-5">
             We’re building a smarter way to manage project construction cost and
             materials. With Reckon IO 1.0, you’ll have real-time pricing,

@@ -1,12 +1,20 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-function Hero() {
+export default function Hero() {
+  const router = useRouter();
+
+  const scrollToDownload = (e) => {
+    e.preventDefault();
+    router.push("/#download-section");
+  };
+
   return (
-    <div className=" h-screen min-h-[550px] lg:max-h-[900px] bg-cover bg-no-repeat relative pt-2">
+    <div className="h-screen min-h-[550px] lg:max-h-[900px] bg-cover bg-no-repeat relative pt-2">
       <div className="container h-full flex items-center flex-col justify-center gap-7">
-        {/* Hero Text */}
         <h1 className="w-[287px] sm:w-[400px] lg:w-[755px] text-center ">
           Estimate Smarter, Manage Better with Reckon IO
         </h1>
@@ -17,17 +25,20 @@ function Hero() {
           updates and enhanced features!
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/" className="pry-btn btn-base mt-5 sm:mx-0 mx-auto">
+          <button
+            onClick={scrollToDownload}
+            className="pry-btn btn-base mt-5 sm:mx-0 mx-auto"
+          >
             Try Reckon Beta Now
-          </Link>
-          <Link href="/" className="sec-btn btn-base mt-5 sm:mx-0 mx-auto">
-            Stay Updated on Version 1.0
+          </button>
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeCwjAAw6enPzGHg6qrqgTVKPBxVBTWWdGBCAaHn3qGUMQNPQ/viewform?usp=sf_link"
+            className="sec-btn btn-base mt-5 sm:mx-0 mx-auto"
+          >
+            Send Feedback
           </Link>
         </div>
       </div>
-      {/* mom hugging child image */}
     </div>
   );
 }
-
-export default Hero;

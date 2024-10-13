@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+import { useSearchParams } from "next/navigation";
+
 import Image from "next/image";
 import Phone from "@/public/images/phoneMockUp.png";
 import androidQr from "@/public/images/androidQr.png";
@@ -6,14 +9,27 @@ import appleQr from "@/public/images/appleQr.png";
 import Link from "next/link";
 
 function Download() {
+  const ref = useRef(null);
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (searchParams.get("scroll") === "download" && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [searchParams]);
+
   return (
-    <section className="bg-reckonBlueGreen lg:h-[789px] md:h-[600px] sm:h-full">
+    <section
+      className="bg-reckonBlueGreen lg:h-[789px] md:h-[600px] sm:h-full"
+      id="download-section"
+      ref={ref}
+    >
       <div className="grid md:grid-cols-2 lg:gap-[60px]  h-full w-full container">
         <div className="flex flex-col justify-center w-full gap-6">
           <h2 className="text-white md:text-left text-center">
             Download Reckon IO Beta
           </h2>
-          <p className="lg:text-xl lg:leading-[32px] md:text-lg md:leading-normal font-medium sm:text-base text-xs leading-[14px] md:text-left text-center">
+          <p className="lg:text-2xl lg:leading-[32px] md:text-lg md:leading-normal font-medium text-sm sm:text-lg leading-[14px] md:text-left text-center">
             Easily calculate materials for your construction projects.Use Reckon
             IO Beta to quickly determine the number of blocks, cement, fine, and
             coarse aggregates required for concrete works.
