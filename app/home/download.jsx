@@ -1,7 +1,4 @@
-"use client";
-import React, { useEffect, useRef } from "react";
-import { useSearchParams } from "next/navigation";
-
+import React from "react";
 import Image from "next/image";
 import Phone from "@/public/images/phoneMockUp.png";
 import androidQr from "@/public/images/androidQr.png";
@@ -9,20 +6,10 @@ import appleQr from "@/public/images/appleQr.png";
 import Link from "next/link";
 
 function Download() {
-  const ref = useRef(null);
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    if (searchParams.get("scroll") === "download" && ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [searchParams]);
-
   return (
     <section
       className="bg-reckonBlueGreen lg:h-[789px] md:h-[600px] sm:h-full"
       id="download-section"
-      ref={ref}
     >
       <div className="grid md:grid-cols-2 lg:gap-[60px]  h-full w-full container">
         <div className="flex flex-col justify-center w-full gap-6">

@@ -2,14 +2,14 @@
 
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 export default function Hero() {
-  const router = useRouter();
-
   const scrollToDownload = (e) => {
     e.preventDefault();
-    router.push("/#download-section");
+    const downloadSection = document.getElementById("download-section");
+    if (downloadSection) {
+      downloadSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
