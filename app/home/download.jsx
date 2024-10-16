@@ -49,13 +49,13 @@ function Download() {
           </div>
           <div className="flex flex-col justify-center items-center w-full sm:flex-row gap-3 md:hidden pt-6 pb-10">
             <Link
-              href="/"
+              href="https://apps.apple.com/ng/app/reckon-project-cost-app/id6624313853"
               className=" h-[59px] font-semibold text-reckonBlueGreen bg-white flex items-center justify-center rounded-[10px]  w-[198px]  "
             >
               Download for Iphone
             </Link>
             <Link
-              href="/"
+              href="https://play.google.com/store/apps/details?id=com.thinktech.reckon&pcampaignid=web_share"
               className=" h-[59px] font-semibold flex items-center bg-transparent border border-white justify-center rounded-[10px]  w-[198px] "
             >
               Download for Android
